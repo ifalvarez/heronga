@@ -1,0 +1,19 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Skills\Nova.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Skills\Nova.cs" Line="27" Column="7" />
+      <File FileName="Assets\Scripts\Skills\Skill.cs" Line="14" Column="17" />
+      <File FileName="Assets\Scripts\Skills\Fireball.cs" Line="11" Column="15" />
+      <File FileName="Assets\Scripts\Damageable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Attacker\MouseAttacker.cs" Line="11" Column="4" />
+      <File FileName="Assets\Scripts\Skills\Performer.cs" Line="16" Column="3" />
+      <File FileName="Assets\Scripts\Attacker\Attacker.cs" Line="30" Column="4" />
+      <File FileName="Assets\Scripts\Projectile\Projectile.cs" Line="24" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
