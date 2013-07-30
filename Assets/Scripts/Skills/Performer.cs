@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 
 public class Performer : MonoBehaviour {
+	//Makes an object able to perform skills.
+	
 	
 	public Skill[] skills;
 	public GameObject target = null;

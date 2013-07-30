@@ -3,6 +3,7 @@ using System.Collections;
 	
 [RequireComponent(typeof(SphereCollider))]
 public class RangeAttacker : Attacker {
+	//Makes this object automatically attack nearby targets	
 	
 	SphereCollider attackRange;
 	public string[] tagsToTarget = {"Enemy"};
