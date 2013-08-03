@@ -12,6 +12,8 @@ public class Attacker : MonoBehaviour {
 	// Use this for initialization
 	public virtual void Start () {
 		performer = GetComponent<Performer>();
+		if(performer == null)
+			Debug.LogError("no performer");
 		if(skill == null){
 			skill = performer.skills[0];
 		}

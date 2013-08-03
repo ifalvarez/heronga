@@ -31,7 +31,13 @@ public class RangeAttacker : Attacker {
     }
 	
 	void getTarget(Collider other){
-		if (performer.target == null){
+		if (performer == null){
+			performer = GetComponent<Performer>();
+		}
+		if (performer == null){
+			Debug.LogError("performer still null");
+		}
+		if(performer != null && performer.target == null){
 			foreach (string t in tagsToTarget){
 				if(other.tag == t){
 					performer.target = other.gameObject;

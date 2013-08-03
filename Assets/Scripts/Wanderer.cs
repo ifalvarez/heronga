@@ -9,10 +9,10 @@ public class Wanderer : Walker {
 	
 	// Update is called once per frame
 	public override void Update () {
-		base.Update();
 		if (Time.time >= nextChangeDirectionTime){
 			changeDirection();
 		}
+		base.Update();
 	}
 	
 	public void changeDirection(){
@@ -46,6 +46,4 @@ public class Wanderer : Walker {
 		nextChangeDirectionTime = Time.time + changeDirectionTime;
 		
 	}
-	
-	
 }

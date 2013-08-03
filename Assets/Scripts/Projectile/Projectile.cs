@@ -23,8 +23,13 @@ public class Projectile : MonoBehaviour {
 	}
 	
 	void OnCollisionEnter(Collision other) {
+		Debug.Log("projectile enter");
 		CheckDamage(other);
 		CheckDestroyProjectile(other);
+	}
+	
+	void OnCollisionStay(Collision other){
+		Debug.Log("projectile staying");
 	}
 	
 	public virtual void CheckDestroyProjectile(Collision other){

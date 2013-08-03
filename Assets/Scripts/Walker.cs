@@ -12,8 +12,8 @@ public class Walker : MonoBehaviour {
 	
 	public Vector3 move;
 	public float moveSpeed = 5f;
-	protected CharacterController controller; 
-		
+	protected CharacterController controller;
+	
 	// Use this for initialization
 	public virtual void Start () {
 		controller = GetComponent<CharacterController>();

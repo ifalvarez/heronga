@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_1_5;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;UNITY_ANDROID_API;ENABLE_CLOTH;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;UNITY_4_1_5;UNITY_4_1;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -56,12 +56,14 @@
      <Compile Include="Assets\Scripts\Pickables\Pickable.cs" />
      <Compile Include="Assets\Scripts\Pickables\Picker.cs" />
      <Compile Include="Assets\Scripts\PlayerControlled.cs" />
+     <Compile Include="Assets\Scripts\Projectile\DistanceHomingProjectile.cs" />
      <Compile Include="Assets\Scripts\Projectile\HomingProjectile.cs" />
      <Compile Include="Assets\Scripts\Projectile\Projectile.cs" />
      <Compile Include="Assets\Scripts\Settings.cs" />
      <Compile Include="Assets\Scripts\Singleton\UnitySingleton.cs" />
      <Compile Include="Assets\Scripts\Singleton\UnitySingletonPersistent.cs" />
      <Compile Include="Assets\Scripts\Skills\Fireball.cs" />
+     <Compile Include="Assets\Scripts\Skills\HomingGreenBall.cs" />
      <Compile Include="Assets\Scripts\Skills\Nova.cs" />
      <Compile Include="Assets\Scripts\Skills\Performer.cs" />
      <Compile Include="Assets\Scripts\Skills\Skill.cs" />
@@ -73,7 +75,19 @@
      <Compile Include="Assets\Scripts\Walker.cs" />
      <Compile Include="Assets\Scripts\Wanderer.cs" />
      <Compile Include="Assets\Scripts\WandererDirectionChanger.cs" />
-     <Compile Include="Assets\Sources\LightningBolt.cs" />
+     <Compile Include="Assets\TouchScript\Examples\Basic\Scripts\Breaker.cs" />
+     <Compile Include="Assets\TouchScript\Examples\Basic\Scripts\Spawnera.cs" />
+     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\BackgroundCube.cs" />
+     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\BackgroundSpawner.cs" />
+     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\BigCube.cs" />
+     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\Bump.cs" />
+     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\Button.cs" />
+     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\Cubes.cs" />
+     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\Side.cs" />
+     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\SideButton.cs" />
+     <Compile Include="Assets\TouchScript\Examples\Hit Test\Scripts\HitTestScene.cs" />
+     <Compile Include="Assets\TouchScript\Examples\Simple Gestures\Scripts\FullscreenZoom.cs" />
+     <Compile Include="Assets\TouchScript\Examples\Simple Gestures\Scripts\Tapper.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
@@ -89,6 +103,18 @@
      <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularDisplacement.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
+ <Reference Include="OSCsharp">
+ <HintPath>Assets\TouchScript\Plugins\OSCsharp.dll</HintPath>
+ </Reference>
+ <Reference Include="TouchScript">
+ <HintPath>Assets\TouchScript\Plugins\TouchScript.dll</HintPath>
+ </Reference>
+ <Reference Include="TouchScript.Pro">
+ <HintPath>Assets\TouchScript\Plugins\TouchScript.Pro.dll</HintPath>
+ </Reference>
+ <Reference Include="TUIOsharp">
+ <HintPath>Assets\TouchScript\Plugins\TUIOsharp.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
