@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Attacker\RangeAttacker.cs" />
      <Compile Include="Assets\Scripts\Damageable.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+     <Compile Include="Assets\Scripts\GUI\DebugConsole.cs" />
      <Compile Include="Assets\Scripts\Hero.cs" />
      <Compile Include="Assets\Scripts\HeroManager.cs" />
      <Compile Include="Assets\Scripts\Pickables\AddHero.cs" />
@@ -76,19 +77,6 @@
      <Compile Include="Assets\Scripts\Walker.cs" />
      <Compile Include="Assets\Scripts\Wanderer.cs" />
      <Compile Include="Assets\Scripts\WandererDirectionChanger.cs" />
-     <Compile Include="Assets\TouchScript\Examples\Basic\Scripts\Breaker.cs" />
-     <Compile Include="Assets\TouchScript\Examples\Basic\Scripts\Spawnera.cs" />
-     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\BackgroundCube.cs" />
-     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\BackgroundSpawner.cs" />
-     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\BigCube.cs" />
-     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\Bump.cs" />
-     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\Button.cs" />
-     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\Cubes.cs" />
-     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\Side.cs" />
-     <Compile Include="Assets\TouchScript\Examples\Everything Combined\Scripts\SideButton.cs" />
-     <Compile Include="Assets\TouchScript\Examples\Hit Test\Scripts\HitTestScene.cs" />
-     <Compile Include="Assets\TouchScript\Examples\Simple Gestures\Scripts\FullscreenZoom.cs" />
-     <Compile Include="Assets\TouchScript\Examples\Simple Gestures\Scripts\Tapper.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
@@ -102,18 +90,6 @@
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\SkeletonData\animations.txt" />
      <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularDisplacement.shader" />
- <Reference Include="OSCsharp">
- <HintPath>Assets\TouchScript\Plugins\OSCsharp.dll</HintPath>
- </Reference>
- <Reference Include="TouchScript">
- <HintPath>Assets\TouchScript\Plugins\TouchScript.dll</HintPath>
- </Reference>
- <Reference Include="TouchScript.Pro">
- <HintPath>Assets\TouchScript\Plugins\TouchScript.Pro.dll</HintPath>
- </Reference>
- <Reference Include="TUIOsharp">
- <HintPath>Assets\TouchScript\Plugins\TUIOsharp.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

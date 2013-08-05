@@ -62,18 +62,6 @@
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\SkeletonData\animations.txt" />
      <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularDisplacement.shader" />
- <Reference Include="OSCsharp">
- <HintPath>Assets\TouchScript\Plugins\OSCsharp.dll</HintPath>
- </Reference>
- <Reference Include="TouchScript">
- <HintPath>Assets\TouchScript\Plugins\TouchScript.dll</HintPath>
- </Reference>
- <Reference Include="TouchScript.Pro">
- <HintPath>Assets\TouchScript\Plugins\TouchScript.Pro.dll</HintPath>
- </Reference>
- <Reference Include="TUIOsharp">
- <HintPath>Assets\TouchScript\Plugins\TUIOsharp.dll</HintPath>
- </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
