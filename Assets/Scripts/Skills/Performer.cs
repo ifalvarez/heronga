@@ -7,6 +7,7 @@ public class Performer : MonoBehaviour {
 	
 	public Skill[] skills;
 	public GameObject target = null;
+	public GameObject skillCastingPoint = null;
 		
 	// Use this for initialization
 	void Start () {

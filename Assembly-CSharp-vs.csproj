@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\Spawners\PeriodicSpawner.cs" />
      <Compile Include="Assets\Scripts\Spawners\Spawner.cs" />
      <Compile Include="Assets\Scripts\Target.cs" />
+     <Compile Include="Assets\Scripts\TouchPlayerController.cs" />
      <Compile Include="Assets\Scripts\Vibrate.cs" />
      <Compile Include="Assets\Scripts\Walker.cs" />
      <Compile Include="Assets\Scripts\Wanderer.cs" />

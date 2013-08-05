@@ -8,7 +8,8 @@ public class DistanceHomingProjectile : MonoBehaviour {
 	Transform tip = null;
 	
 	public GameObject target = null;
-	protected float targetRadius = 0f;
+	public GameObject targetAnchor = null;
+	protected float targetRadius = 0.6f;
 	private bool selfDestroying = false;
 	
 	public virtual void Start () {
@@ -16,7 +17,7 @@ public class DistanceHomingProjectile : MonoBehaviour {
 			Expire(expireTime);
 		}
 		tip = transform.Find("Tip");
-		targetRadius = target.GetComponent<CapsuleCollider>().radius;
+		targetAnchor = target.transform.Find("Anchors").Find("TargetAnchor").gameObject;
 	}
 	
 	// Update is called once per frame
@@ -27,10 +28,10 @@ public class DistanceHomingProjectile : MonoBehaviour {
 		if (selfDestroying){
 			transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
 		}else if (target != null){
-			if (Vector3.Distance(tip.position, target.transform.position) <= targetRadius){
+			if (Vector3.Distance(tip.position, targetAnchor.transform.position) <= targetRadius){
 				OnHit();
 			}else{
-				transform.LookAt(target.transform.position);
+				transform.LookAt(targetAnchor.transform.position);
 				transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
 			}
 		}else{
