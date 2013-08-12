@@ -6,6 +6,7 @@ public class Damageable : MonoBehaviour {
 	public int hp = 100;
 	protected Animator animator = null;
 	protected int gettingHitState = Animator.StringToHash("Base Layer.Getting hit"); 
+	protected int spellState = Animator.StringToHash("Base Layer.Spell");
 	private AnimatorStateInfo currentStateInfo;
 	
 	// Use this for initialization
@@ -22,6 +23,10 @@ public class Damageable : MonoBehaviour {
 		if (currentStateInfo.nameHash == gettingHitState){
 			animator.SetBool("hit", false);
 		}
+		if (currentStateInfo.nameHash == spellState){
+			animator.SetBool("spell", false);
+		}
+		
 	}
 	
 	public void Damage(int amount){
@@ -29,7 +34,7 @@ public class Damageable : MonoBehaviour {
 		animator.SetBool("hit", true);
 	}
 	
-	public void Die(){
+	virtual public void Die(){
 		Destroy(gameObject);
 	}
 }

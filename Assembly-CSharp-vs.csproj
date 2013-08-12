@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Attacker\PeriodicAttacker.cs" />
      <Compile Include="Assets\Scripts\Attacker\RangeAttacker.cs" />
      <Compile Include="Assets\Scripts\Damageable.cs" />
+     <Compile Include="Assets\Scripts\DamageableHero.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\Scripts\GUI\DebugConsole.cs" />
      <Compile Include="Assets\Scripts\Hero.cs" />
@@ -63,7 +64,8 @@
      <Compile Include="Assets\Scripts\Settings.cs" />
      <Compile Include="Assets\Scripts\Singleton\UnitySingleton.cs" />
      <Compile Include="Assets\Scripts\Singleton\UnitySingletonPersistent.cs" />
-     <Compile Include="Assets\Scripts\Skills\Fireball.cs" />
+     <Compile Include="Assets\Scripts\Skills\AutoTarget.cs" />
+     <Compile Include="Assets\Scripts\Skills\Firenova.cs" />
      <Compile Include="Assets\Scripts\Skills\HomingGreenBall.cs" />
      <Compile Include="Assets\Scripts\Skills\Nova.cs" />
      <Compile Include="Assets\Scripts\Skills\Performer.cs" />
@@ -88,7 +90,6 @@
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
-     <None Include="Assets\SkeletonData\animations.txt" />
      <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularDisplacement.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>

@@ -3,17 +3,25 @@ using System.Collections;
 	
 [RequireComponent(typeof(SphereCollider))]
 public class RangeAttacker : Attacker {
-	//Makes this object automatically attack nearby targets	
+	//Makes this object automatically attack targets inside the collider	
 	
-	SphereCollider attackRange;
+	Collider attackRange;
 	public string[] tagsToTarget = {"Enemy"};
+	public GameObject target = null;
 	
 	// Use this for initialization
 	public override void Start () {
 		base.Start();
-		attackRange = GetComponent<SphereCollider>();
-		attackRange.radius = 5;
+		attackRange = GetComponent<Collider>();
 		attackRange.isTrigger = true;
+	}
+	
+	public override void Update ()
+	{
+		base.Update ();
+		if (target != null){
+			Attack();
+		}
 	}
 	
 	void OnTriggerEnter(Collider other) {
@@ -25,33 +33,19 @@ public class RangeAttacker : Attacker {
     }
 	
 	void OnTriggerExit(Collider other) {
-		if (performer.target != null && performer.target.name == other.gameObject.name){
-        	performer.target = null;
+		if (target != null && target.name == other.gameObject.name){
+        	target = null;
 		}
     }
 	
 	void getTarget(Collider other){
-		if (performer == null){
-			performer = GetComponent<Performer>();
-		}
-		if (performer == null){
-			Debug.LogError("performer still null");
-		}
-		if(performer != null && performer.target == null){
+		if(target == null){
 			foreach (string t in tagsToTarget){
 				if(other.tag == t){
-					performer.target = other.gameObject;
+					target = other.gameObject;
 					break;
 				}
 			}
-		}
-	}
-	
-	public override void Update ()
-	{
-		base.Update ();
-		if (performer.target != null){
-			Attack();
 		}
 	}
 }

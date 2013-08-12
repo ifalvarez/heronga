@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour {
 	
 	public GameObject Spawn(){
 		Vector3 spawnPosition = transform.position + 
-			new Vector3(Random.value * radius, 0f, Random.value * radius);
+			new Vector3(Random.Range(-1f,1f) * radius, 0f, Random.Range(-1f, 1f) * radius);
 		spawnPosition.y = transform.position.y;
 		GameObject clone = Instantiate(spawn, spawnPosition, Quaternion.identity) as GameObject;
 		clone.transform.parent = GameObject.Find("DynamicObjects").transform;
