@@ -5,13 +5,15 @@ public class Projectile : MonoBehaviour {
 	
 	public float moveSpeed = 5;
 	public int damage = 10;
-	private float expireTime = 0;
+	public float expireTime = 3;
+	private GameObject target = null;
 	
 	// Use this for initialization
 	public virtual void Start () {
 		if (expireTime > 0){
 			Expire(expireTime);
 		}
+		rigidbody.AddForce(transform.forward * moveSpeed, ForceMode.VelocityChange);
 	}
 	
 	// Update is called once per frame
@@ -23,27 +25,28 @@ public class Projectile : MonoBehaviour {
 	}
 	
 	void OnCollisionEnter(Collision other) {
-		Debug.Log("projectile enter");
-		CheckDamage(other);
-		CheckDestroyProjectile(other);
+		target = other.gameObject;
+		OnHit();
 	}
 	
-	void OnCollisionStay(Collision other){
-		Debug.Log("projectile staying");
+	public void OnHit(){
+		DoDamage();
+		DestroyProjectile();
 	}
 	
-	public virtual void CheckDestroyProjectile(Collision other){
-		Destroy(gameObject);
-	}
-	
-	public virtual void CheckDamage(Collision other){
-		Damageable damageable = other.gameObject.GetComponent<Damageable>();
+	public virtual void DoDamage(){
+		Damageable damageable = target.GetComponent<Damageable>();
 		if (damageable != null){
 			damageable.Damage(damage);
 		}
 	}
 	
+	//Handle destroy and its animations
+	virtual public void DestroyProjectile() {
+		Destroy(gameObject);
+	}
+	
 	public void Expire(float timeToExpire){
-		expireTime = Time.time + timeToExpire;;
+		expireTime = Time.time + timeToExpire;
 	}
 }
