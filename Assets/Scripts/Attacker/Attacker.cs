@@ -6,7 +6,8 @@ public class Attacker : MonoBehaviour {
 	public float cooldown = 1.0f;
 	protected float nextAttackTime = 0.0f;
 	protected Skill skill = null;
-	
+	public string[] tagsToTarget = null;
+		
 	virtual public void Start(){
 		skill = GetComponent<Skill>();
 	}

@@ -5,7 +5,6 @@ public class RangeAttacker : Attacker {
 	//Makes this object automatically attack targets inside the collider	
 	
 	Collider attackRange;
-	public string[] tagsToTarget = {"Enemy"};
 	public GameObject target = null;
 	
 	// Use this for initialization

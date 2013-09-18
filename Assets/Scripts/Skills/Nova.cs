@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class Nova : Skill {
 	public float radius = 5;
@@ -24,10 +25,12 @@ public class Nova : Skill {
         int i = 0;
 		Damageable d = null;
 		while (i < hitColliders.Length) {
-            d = hitColliders[i].GetComponent<Damageable>();
-			if (d != null && d.gameObject.GetInstanceID() != performer.transform.parent.gameObject.GetInstanceID()){
-				//Debug.Log("damaged: "+d.gameObject.name + d.gameObject.GetInstanceID() + "...." +performer.gameObject.GetInstanceID());
-				d.Damage(damage);
+            d = hitColliders[i].GetComponentInChildren<Damageable>();
+			if (d != null){
+				if(Array.IndexOf(attacker.tagsToTarget, d.transform.parent.tag) > -1){
+					//Debug.Log("damaged: "+d.gameObject.name + d.gameObject.GetInstanceID() + "...." +performer.gameObject.GetInstanceID());
+					d.Damage(damage);
+				}
 			}
 			i++;
         }

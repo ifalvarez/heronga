@@ -35,7 +35,7 @@ public class Projectile : MonoBehaviour {
 	}
 	
 	public virtual void DoDamage(){
-		Damageable damageable = target.GetComponent<Damageable>();
+		Damageable damageable = target.GetComponentInChildren<Damageable>();
 		if (damageable != null){
 			damageable.Damage(damage);
 		}
